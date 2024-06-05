@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotación 3D con CSS</title>
+    <style>
+        /* Estilos generales para el cuerpo */
+        body {
+            display: flex; /* Usamos flexbox para centrar el contenido */
+            justify-content: center; /* Centramos horizontalmente */
+            align-items: center; /* Centramos verticalmente */
+            height: 100vh; /* Altura del contenedor de toda la ventana */
+            margin: 0; /* Eliminamos márgenes predeterminados */
+            background-color: #f0f0f0; /* Color de fondo claro */
+            perspective: 1000px; /* Añadimos perspectiva para efecto 3D */
+        }
+        /* Estilos para el cubo */
+        .cube {
+            width: 100px; /* Ancho del cubo */
+            height: 100px; /* Altura del cubo */
+            position: relative; /* Posicionamiento relativo para las caras */
+            transform-style: preserve-3d; /* Mantener los hijos en 3D */
+            animation: rotate3d 4s linear infinite; /* Animación de rotación */
+        }
+        /* Estilos para las caras del cubo */
+        .cube div {
+            position: absolute; /* Posicionamiento absoluto dentro del cubo */
+            width: 100px; /* Ancho de las caras */
+            height: 100px; /* Altura de las caras */
+            background: rgba(150, 0, 255, 0.6); /* Color de fondo semi-transparente */
+            border: 1px solid #000; /* Borde negro para las caras */
+        }
+        .front  { transform: translateZ(50px); } /* Cara frontal */
+        .back   { transform: rotateY(180deg) translateZ(50px); } /* Cara trasera */
+        .left   { transform: rotateY(-90deg) translateZ(50px); } /* Cara izquierda */
+        .right  { transform: rotateY(90deg) translateZ(50px); } /* Cara derecha */
+        .top    { transform: rotateX(90deg) translateZ(50px); } /* Cara superior */
+        .bottom { transform: rotateX(-90deg) translateZ(50px); } /* Cara inferior */
+
+        /* Definición de la animación de rotación en 3D */
+        @keyframes rotate3d {
+            from {
+                transform: rotateX(0) rotateY(0); /* Rotación inicial */
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg); /* Rotación final (deg=grados) */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="front"></div> <!-- Cara frontal del cubo -->
+        <div class="back"></div> <!-- Cara trasera del cubo -->
+        <div class="left"></div> <!-- Cara izquierda del cubo -->
+        <div class="right"></div> <!-- Cara derecha del cubo -->
+        <div class="top"></div> <!-- Cara superior del cubo -->
+        <div class="bottom"></div> <!-- Cara inferior del cubo -->
+    </div>
+</body>
+</html>

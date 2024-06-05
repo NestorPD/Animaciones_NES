@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        img{
+            width: 5cm;
+            height: 5cm;
+        }
+
+        .total{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: relative;
+            /* perspective-origin: center; */
+            transition: 2s ease;
+        }
+
+        .cartas2{
+            transition-delay: 1s;
+        } 
+
+         .total:hover{
+            transform: rotateX(90deg) translateY(-65px);
+
+        } 
+
+        .total:not(:hover){
+            transition-delay: 1s;
+        }
+
+        /* .total:hover .block:nth-child(1) {
+            transition-delay: 1s;
+                transform: rotateX(90deg) translateY(-65px);
+
+
+        }
+        .total:hover .block:nth-child(2) {
+            transition-delay: 2s;
+            transform: rotateX(90deg) translateY(-65px);
+
+
+        }
+        .total:hover .block:nth-child(3) {
+            transition-delay: 3s;
+            transform: rotateX(90deg) translateY(-65px);
+
+
+        }
+        .total:hover .block:nth-child(4) {
+            transition-delay: 4s;
+            transform: rotateX(90deg) translateY(-65px);
+
+
+        } */
+
+
+    </style>
+</head>
+<body>
+
+    <div class="total">
+
+        <div class="cartas1">
+            <img src="img/desert-4933581_1280.jpg" alt="">
+        </div>
+
+        <div class="cartas2">
+            <img src="img/f.elconfidencial.com_original_614_40c_f02_61440cf024b55a412a97e4c4c59fffbd.jpg" alt="">
+        </div>
+
+        <div class="cartas3">
+            <img src="img/windmills-4278679_1280.jpg" alt="">
+        </div>
+
+        <div class="cartas4">
+            <img src="img/landscape-3127859_1280.jpg" alt="">
+        </div>
+
+    </div>  
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición CSS</title>
+    <style>
+        /* Estilos iniciales para el div */
+        div {
+            width: 100px; /* Ancho inicial del div */
+            height: 100px; /* Altura inicial del div */
+            background-image: url(img/IMG_2324.jpg); /* Imagen de fondo local */
+            background-size: cover; /* Asegurarse de que la imagen cubra todo el div */
+            background-position: center; /* Centrar la imagen en el div */
+
+
+            /* Definición de las propiedades de transición */
+            transition-property: width, height, background-color; 
+            /* Propiedades que tendrán transición: ancho, alto, y color de fondo */
+
+            transition-duration: 2s, 2s, 1s; 
+            /* Duraciones de las transiciones:
+            - Ancho: 2 segundos
+            - Alto: 2 segundos
+            - Color de fondo: 1 segundo */
+
+            transition-timing-function: ease-in, ease-out, linear; 
+            /* Funciones de temporización para cada transición:
+            - Ancho: aceleración lenta al principio (ease-in)
+            - Alto: desaceleración al final (ease-out)
+            - Color de fondo: velocidad constante (linear) */
+
+            transition-delay: 0s, 1s, 0s; 
+            /* Retrasos antes de iniciar cada transición:
+            - Ancho: sin retraso (0s)
+            - Alto: 1 segundo de retraso
+            - Color de fondo: sin retraso (0s) */
+        }
+
+        /* Estilos para el div cuando se pasa el ratón sobre él
+        div:hover {
+            width: 200px;  Ancho final del div 
+            height: 200px;  Altura final del div 
+            background-color: red;  Color de fondo final del div 
+        }
+   */
+        /* Imagen Estilos para el div cuando se pasa el ratón sobre él */
+        div:hover { 
+            width: 300px; /* Ancho final del div */
+            height: 300px; /* Altura final del div */
+            background-color: transparent; /* Hacer transparente el color de fondo */
+            background-image: url(img/IMG_2324.jpg); /* Imagen de fondo local */
+            background-size: cover; /* Asegurarse de que la imagen cubra todo el div */
+            background-position: center; /* Centrar la imagen en el div */
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <!-- Div que aplicará las transiciones al pasar el ratón sobre él -->
+    <div>
+    </div>
+</body>
+</html>

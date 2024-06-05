@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Analógico en CSS</title>
+    <style>
+        /* Estilos generales para el cuerpo */
+        body {
+            display: flex; /* Usamos flexbox para centrar el contenido */
+            justify-content: center; /* Centramos horizontalmente */
+            align-items: center; /* Centramos verticalmente */
+            height: 100vh; /* Altura del contenedor de toda la ventana */
+            margin: 0; /* Eliminamos márgenes predeterminados */
+            background-color: #f0f0f0; /* Color de fondo claro */
+        }
+
+        /* Estilos para el contenedor del reloj */
+        .clock {
+            width: 200px; /* Ancho del reloj */
+            height: 200px; /* Altura del reloj */
+            border: 10px solid #333; /* Borde del reloj */
+            border-radius: 50%; /* Hacemos el contenedor circular */
+            position: relative; /* Posicionamiento relativo para las manecillas */
+            background-color: white; /* Fondo blanco para el reloj */
+        }
+
+        /* Estilos para las manecillas del reloj */
+        .hand {
+            width: 50%; /* Ancho de las manecillas (mitad del reloj) */
+            height: 6px; /* Altura de las manecillas */
+            background-color: #333; /* Color de las manecillas */
+            position: absolute; /* Posicionamiento absoluto dentro del reloj */
+            top: 50%; /* Posicionamos la manecilla en el centro verticalmente */
+            left: 50%; /* Posicionamos la manecilla en el centro horizontalmente */
+            transform-origin: 0% 50%; /* Punto de rotación al principio de la manecilla */
+            transform: rotate(90deg); /* Rotamos la manecilla 90 grados */
+        }
+
+        /* Estilos específicos para la manecilla de las horas */
+        .hour {
+            height: 8px; /* Más gruesa que las demás */
+            animation: rotateHour 43200s linear infinite; /* 12 horas (43200 segundos) */
+        }
+
+        /* Estilos específicos para la manecilla de los minutos */
+        .minute {
+            height: 6px; /* Altura estándar */
+            animation: rotateMinute 3600s linear infinite; /* 60 minutos (3600 segundos) */
+        }
+
+        /* Estilos específicos para la manecilla de los segundos */
+        .second {
+            height: 4px; /* Más delgada que las demás */
+            background-color: red; /* Color rojo para diferenciarla */
+            animation: rotateSecond 60s linear infinite; /* 60 segundos */
+        }
+
+        /* Animación para la manecilla de las horas */
+        @keyframes rotateHour {
+            from { transform: rotate(90deg); } /* Rotación inicial en 90 grados */
+            to { transform: rotate(450deg); } /* Rotación final en 450 grados (90 + 360) */
+        }
+
+        /* Animación para la manecilla de los minutos */
+        @keyframes rotateMinute {
+            from { transform: rotate(90deg); } /* Rotación inicial en 90 grados */
+            to { transform: rotate(450deg); } /* Rotación final en 450 grados (90 + 360) */
+        }
+
+        /* Animación para la manecilla de los segundos */
+        @keyframes rotateSecond {
+            from { transform: rotate(90deg); } /* Rotación inicial en 90 grados */
+            to { transform: rotate(450deg); } /* Rotación final en 450 grados (90 + 360) */
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="hand hour"></div> <!-- Manecilla de las horas -->
+        <div class="hand minute"></div> <!-- Manecilla de los minutos -->
+        <div class="hand second"></div> <!-- Manecilla de los segundos -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: rgb(156, 156, 240);
+        }
+
+        div{
+            
+            /* background-color: red; */
+            /* border: 0px 50px 100px 50px; */
+            border-bottom: 100px solid  yellow;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            
+            
+            animation: triangulo 5s infinite;
+            width: 0px;
+            height: 0px;
+            margin-top: 8cm;
+         }
+        /* div::before{
+            border-bottom: 500px solid blue;
+            border-right: 500px solid red;
+            border-left: 500px solid violet;
+            overflow: hidden;
+        }
+
+        div::after{
+            border-bottom: 5000px solid blue;
+            border-right: 5000px solid red;
+            border-left: 5000px solid violet;
+        } */ 
+
+        @keyframes triangulo {
+
+            0%{ 
+                transform: scale(1.0);
+                   }
+
+            50%{
+                transform: scale(1.5);
+                     }
+
+             100%{
+                transform: scale(2.0);
+            } 
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+       
+    </div>
+</body>
+</html>

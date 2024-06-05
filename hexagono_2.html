@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.total{
+    animation: triangulo 5s infinite;
+margin-top: 5cm;
+
+
+}
+         body{
+            display: flex;
+            flex-direction: column;
+            background-color: rgb(156, 156, 240);
+            align-items: center;
+        }
+
+        .a{
+            
+            border-bottom: 30px solid  blue;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            
+            
+            width: 0px;
+            height: 0px;
+         }
+         .b{
+            
+            border-bottom: 50px solid  blue;
+            border-left: 50px solid blue;
+            border-right: 50px solid blue;
+            
+            
+            width: 0px;
+            height: 0px;
+         }
+         .c{
+            
+            border-top: 30px solid  blue;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            
+            
+            width: 0px;
+            height: 0px;
+         }
+         
+                                @keyframes triangulo {
+
+                        0%{ 
+                            transform: scale(1.0);
+                            }
+
+                        50%{
+                            transform: scale(1.5);
+                                }
+
+                        100%{
+                            transform: scale(2.0);
+                        } 
+
+                        }
+    </style>
+</head>
+<body>
+    <div class="total">
+        <!-- aqui hice 3 div y luego meti un div grande que metiera los 3 y al div grande le meti la animacion y el keyframes -->
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+</div>
+</body>
+</html>

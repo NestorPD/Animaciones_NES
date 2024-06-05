@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Definición del tipo de documento y el idioma -->
+    <meta charset="UTF-8" />
+    <!-- Configuración de codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configuración para vista adaptable a diferentes dispositivos -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Configuración para compatibilidad con Internet Explorer -->
+    <title>Animaciones</title>
+    <!-- Título de la página -->
+
+    <!-- Estilos CSS -->
+    <style>
+        /* Estilos CSS incluidos directamente en el documento HTML */
+
+        /* Estilos para el cuerpo de la página */
+        body {
+            counter-reset: contador; /* Inicializa un contador CSS */
+            animation: contar 10s forwards alternate infinite; /* Aplica una animación al cuerpo */
+            /* contar: Nombre de la animación.
+                10s: Duración de la animación (10 segundos).
+                forwards: Elemento permanece en el estado final de la animación.
+                alternate: Animación reproduce en sentido contrario en cada ciclo.
+                infinite: Animación se repite infinitamente. */
+            display: flex; /* Establece el diseño de los elementos como flexible */
+            justify-content: center; /* Centra el contenido horizontalmente */
+            align-items: center; /* Centra el contenido verticalmente */
+            min-height: 50vh; /* Altura mínima del cuerpo */
+            flex-direction: column; /* Alinea elementos de forma vertical */
+        }
+
+        /* Contenido adicional después del cuerpo de la página */
+        body::after { 
+            content: counter(contador); /* Muestra el valor del contador en un pseudo-elemento después del cuerpo */
+            font-size: 15em; /* Tamaño de fuente para el contador */
+        }
+
+        /* Animación de la cuenta atrás */
+        @keyframes contar {
+            /* Define la animación "contar" */
+            0% {
+                counter-increment: contador 0;
+                /* Incrementa el contador en 0 */
+                background: #cc0000;
+                /* Fondo color rojo */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            10% {
+                counter-increment: contador 1;
+                /* Incrementa el contador en 1 */
+                background: #cc7a00;
+                /* Fondo color naranja oscuro */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            20% {
+                counter-increment: contador 2;
+                /* Incrementa el contador en 2 */
+                background: #a3cc00;
+                /* Fondo color verde lima */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            30% {
+                counter-increment: contador 3;
+                /* Incrementa el contador en 3 */
+                background: #29cc00;
+                /* Fondo color verde */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            40% {
+                counter-increment: contador 4;
+                /* Incrementa el contador en 4 */
+                background: #00cc52;
+                /* Fondo color verde turquesa */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            50% {
+                counter-increment: contador 5;
+                /* Incrementa el contador en 5 */
+                background: #00cccc;
+                /* Fondo color cian */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            60% {
+                counter-increment: contador 6;
+                /* Incrementa el contador en 6 */
+                background: #0052cc;
+                /* Fondo color azul */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            70% {
+                counter-increment: contador 7;
+                /* Incrementa el contador en 7 */
+                background: #2900cc;
+                /* Fondo color azul oscuro */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            80% {
+                counter-increment: contador 8;
+                /* Incrementa el contador en 8 */
+                background: #a300cc;
+                /* Fondo color púrpura */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            90% {
+                counter-increment: contador 9;
+                /* Incrementa el contador en 9 */
+                background: #cc007a;
+                /* Fondo color rosa oscuro */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            100% {
+                counter-increment: contador 10;
+                /* Incrementa el contador en 10 */
+                background: #cc0000;
+                /* Fondo color rojo */
+                color: #fff;
+                /* Texto color blanco */
+            }
+        }
+
+         
+        
+    </style>
+</head>
+<body>
+    <div class="contar"></div>
+</body>
+</html>

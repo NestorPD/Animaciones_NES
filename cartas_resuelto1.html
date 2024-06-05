@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Definición del tipo de documento y el idioma -->
+
+    <meta charset="UTF-8">
+    <!-- Configuración de codificación de caracteres -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configuración para vista adaptable a diferentes dispositivos -->
+
+    <title>Animación de Bloques 3D</title>
+    <!-- Título de la página -->
+
+    <style>
+        /* Estilos CSS incluidos directamente en el documento HTML */
+        img{
+            width: 5cm;
+            height: 5cm;
+        }
+        body {
+            display: flex; /* Establece el modelo de caja flexible */
+            justify-content: center; /* Centra horizontalmente los elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+            height: 100vh; /* Establece la altura del cuerpo al 100% del viewport */
+            perspective: 800px; /* Define la perspectiva para la animación 3D */
+        }
+
+        .container {
+            position: relative; /* Establece el posicionamiento relativo */
+            width: 400px; /* Ancho total de los bloques más el margen */
+            height: 65px; /* Altura de los bloques */
+            perspective-origin: center; /* Define el punto de perspectiva */
+        }
+
+        .block {
+            display: inline-block; /* Hace que los bloques se comporten como elementos en línea */
+            width: 100px; /* Ancho de cada bloque */
+            height: 65px; /* Altura de cada bloque */
+            background-color: #3498db; /* Color inicial de los bloques */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+            transition: transform 0.5s ease; /* Transición suave */
+            margin-right: 20px; /* Margen entre los bloques */
+        }
+         
+        
+        /* `.block:nth-child` es un selector CSS que selecciona todos los elementos que son hijos de su elemento padre
+         y que son del tipo especificado por `block` y están en la posición numérica especificada. Por ejemplo, `.block:nth-child(2)`
+          seleccionaría el segundo hijo de su elemento padre que tiene la clase `block`. */
+
+          /* La razón por la que no necesitas un `.block:nth-child(1)` es que los selectores `:nth-child`
+           seleccionan elementos basados en su posición en relación con sus hermanos, no en su clase.
+            Si estás buscando seleccionar el primer elemento con la clase `.block`, simplemente puedes usar `.block:first-child`. */
+          
+        .block:nth-child(2) {
+            background-color: #2ecc71; /* Color del segundo bloque */
+        }
+
+        .block:nth-child(3) {
+            background-color: #8e44ad; /* Color del tercer bloque */
+        }
+
+        .container:hover .block:nth-child(1) {
+            transform: rotateX(90deg) translateY(-65px); /* Rotación y traslación para el primer bloque */
+        }
+
+        .container:hover .block:nth-child(2) {
+            transform: rotateX(90deg) translateY(-65px); /* Rotación y traslación para el segundo bloque */
+            transition-delay: 1s; /* Retardo de 1 segundo para el segundo bloque */
+        }
+
+        .container:hover .block:nth-child(3) {
+            transform: rotateX(90deg) translateY(-65px); /* Rotación y traslación para el tercer bloque */
+            transition-delay: 2s; /* Retardo de 2 segundos para el tercer bloque */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cuerpo de la página -->
+    <div class="container">
+        <!-- Contenedor de los bloques -->
+        <div class="block">
+            <img src="img/landscape-3127859_1280.jpg" alt="">
+        </div> <!-- Primer bloque -->
+        <div class="block">
+            <img src="img/windmills-4278679_1280.jpg" alt="">
+        </div> <!-- Segundo bloque -->
+        <div class="block">
+            <img src="img/f.elconfidencial.com_original_614_40c_f02_61440cf024b55a412a97e4c4c59fffbd.jpg" alt="">
+        </div> <!-- Tercer bloque -->
+        <div class="block">
+            <img src="img/morning-4411421_1280.jpg" alt="">
+        </div> <!-- Tercer bloque -->
+    </div>
+</body>
+</html>

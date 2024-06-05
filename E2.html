@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- La metaetiqueta charset define la codificación de caracteres del documento como UTF-8,
+         lo que permite usar una amplia variedad de caracteres y símbolos. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- La metaetiqueta viewport establece cómo se debe comportar el diseño de la página 
+         en diferentes dispositivos, asegurando que sea responsivo. 
+         width=device-width establece el ancho de la página para que coincida con el ancho de la pantalla del dispositivo. -->
+
+    <title> Transiciones CSS</title>
+    <!-- El título del documento, que aparecerá en la pestaña del navegador. -->
+
+    <style>
+        /* Estilos generales para los títulos */
+        h2 {
+            margin-top: 30px; /* Margen superior de los títulos: 30 píxeles */
+            font-size: 20px; /* Tamaño de la fuente de los títulos: 20 píxeles */
+        }
+
+        /* Estilos para contenedores */
+        .container {
+            margin: 20px 0; /* Margen superior e inferior de los contenedores: 20 píxeles */
+            padding: 20px; /* Relleno de los contenedores: 20 píxeles */
+            border: 1px solid #ccc; /* Borde de los contenedores: 1 píxel sólido y color gris claro */
+        }
+
+        /* Estilos para el div */
+        .transition-div {
+            width: 100px; /* Ancho del div: 100 píxeles */
+            height: 100px; /* Altura del div: 100 píxeles */
+            background-color: red; /* Color de fondo inicial: rojo */
+
+            /* Definición de la transición */
+            transition: background-color 2s 500ms ease-in, width 2s 500ms ease-in;
+            /* La transición tiene:
+               - una duración de 2 segundos,
+               - un retardo de 500 milisegundos antes de empezar,
+               - afecta a las propiedades background-color y width,
+               - utiliza la función de aceleración ease-in que comienza lentamente y acelera hacia el final. */
+        }
+
+        .transition-div:hover {
+            background-color: blue; /* Color de fondo cuando se pasa el cursor: azul */
+            width: 150px; /* Ancho del div cuando se pasa el cursor: 150 píxeles */
+        }
+
+        /* Estilos para la imagen */
+        .transition-img {
+            width: 200px; /* Ancho inicial de la imagen: 200 píxeles */
+            transition: width 2s, transform 2s;
+            /* La transición tiene una duración de 2 segundos
+               - afecta a las propiedades width y transform. */
+        }
+
+        .transition-img:hover {
+            width: 300px; /* Ancho de la imagen cuando se pasa el cursor: 300 píxeles */
+            transform: rotate(20deg); /* Rotación de la imagen: 20 grados */
+        }
+
+        /* Estilos para el botón */
+        .transition-button {
+            padding: 10px 20px; /* Relleno interno del botón: 10px arriba/abajo y 20px izquierda/derecha */
+            font-size: 16px; /* Tamaño de la fuente: 16 píxeles */
+            background-color: #4CAF50; /* Color de fondo del botón: verde */
+            color: white; /* Color del texto del botón: blanco */
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima */
+            transition: background-color 0.5s, padding 0.5s;
+            /* La transición tiene una duración de 0.5 segundos
+               - afecta a las propiedades background-color y padding. */
+        }
+
+        .transition-button:hover {
+            background-color: #45a049; /* Color de fondo cuando se pasa el cursor: un verde más oscuro */
+            padding: 15px 25px; /* Relleno interno del botón cuando se pasa el cursor: 15px arriba/abajo y 25px izquierda/derecha */
+        }
+
+        /* Estilos para el párrafo */
+        .transition-paragraph {
+            font-size: 16px; /* Tamaño de la fuente inicial: 16 píxeles */
+            color: black; /* Color del texto inicial: negro */
+            transition: color 1s, font-size 1s;
+            /* La transición tiene una duración de 1 segundo
+               - afecta a las propiedades color y font-size. */
+        }
+
+        .transition-paragraph:hover {
+            color: red; /* Color del texto cuando se pasa el cursor: rojo */
+            font-size: 20px; /* Tamaño de la fuente cuando se pasa el cursor: 20 píxeles */
+        }
+    </style>
+</head>
+<body>
+    <h1>Transiciones CSS</h1>
+    <!-- Título principal de la página -->
+
+    <div class="container">
+        <h2>Transición en un div</h2>
+        <!-- Título para la sección del div -->
+        <div class="transition-div"></div>
+        <!-- Div que será estilizado y tendrá una transición al pasar el cursor -->
+    </div>
+
+    <div class="container">
+        <h2>Transición en una imagen</h2>
+        <!-- Título para la sección de la imagen -->
+        <img class="transition-img" src="https://cdn.pixabay.com/photo/2016/12/13/21/20/alien-1905155_1280.png" alt="Imagen de ejemplo">
+        <!-- Imagen que será estilizada y tendrá una transición al pasar el cursor -->
+    </div>
+
+    <div class="container">
+        <h2>Transición en un botón</h2>
+        <!-- Título para la sección del botón -->
+        <button class="transition-button">Pasa el cursor</button>
+        <!-- Botón que será estilizado y tendrá una transición al pasar el cursor -->
+    </div>
+
+    <div class="container">
+        <h2>Transición en un texto</h2>
+        <!-- Título para la sección del texto -->
+        <p class="transition-paragraph">Pasa el cursor sobre este texto para ver la transición.</p>
+        <!-- Párrafo que será estilizado y tendrá una transición al pasar el cursor -->
+    </div>
+
+   
+
+
+</body>
+</html>
