@@ -25,7 +25,24 @@
             margin-top: 5cm;
 
         }
-
+                    .imagen{
+                        animation: imagen2 2s infinite ;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        justify-content: space-between;
+                        width: 8cm;
+                        height: 8cm;
+                        align-items: stretch;
+                    }
+                    /* .imagen::after{
+                        content:"";
+                        
+                    } */
+                    @keyframes imagen2
+                       { 0%{transform: rotate(90deg);}
+                       50%{ transform: rotate(180deg)}
+                       100%{transform: rotate(360deg);}
+                    }
         .contador::after { 
             content: counter(contador); 
             font-size: 3cm; 
@@ -230,6 +247,9 @@
     
     <div class="contador"></div>
     <div class="contador1"></div>
+    <div class="imagen">
+        <img src="img/IMG_2324.jpg" alt="">
+    </div>
 
 </body>
 </html>
