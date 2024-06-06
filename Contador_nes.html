@@ -6,20 +6,129 @@
     <title>Document</title>
     <style>
 
-        body{
+        .contador{
 
             display: flex;
             flex-direction: column;
             background-color: rgb(156, 156, 240);
             align-items: center;
             counter-reset: contador;
-            animation: contador 4s infinite;
+            animation: contador 2s infinite;
+
+        }
+        .contador1{
+            animation: contador2 4s infinite;
+            font-size: 6cm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 5cm;
 
         }
 
-        body::after { 
+        .contador::after { 
             content: counter(contador); 
             font-size: 3cm; 
+        }
+        .contador1::after { 
+            content: counter(contador); 
+            font-size: 3cm; 
+        }
+        @keyframes contador2 {0% {
+                counter-increment: contador 0;
+                /* Incrementa el contador en 0 */
+                background: #cc0000;
+                /* Fondo color rojo */
+                color: #fff;
+                /* Texto color blanco */
+                transform: scale(1.1);
+            }
+            10% {
+                counter-increment: contador 10;
+                /* Incrementa el contador en 1 */
+                background: #cc7a00;
+                /* Fondo color naranja oscuro */
+                color: #fff;
+                /* Texto color blanco */
+                transform: scale(1.2);
+            }
+            20% {
+                counter-increment: contador 9;
+                /* Incrementa el contador en 2 */
+                background: #a3cc00;
+                /* Fondo color verde lima */
+                color: #fff;
+                /* Texto color blanco */
+                transform: scale(1.3);
+                transform: rotate(180deg);
+            }
+            30% {
+                counter-increment: contador 8;
+                /* Incrementa el contador en 3 */
+                background: #29cc00;
+                /* Fondo color verde */
+                color: #fff;
+                /* Texto color blanco */
+                transform: scale(1.4);
+            }
+            40% {
+                counter-increment: contador 7;
+                /* Incrementa el contador en 4 */
+                background: #00cc52;
+                /* Fondo color verde turquesa */
+                color: #fff;
+                /* Texto color blanco */
+                transform: scale(1.5);
+            }
+            50% {
+                counter-increment: contador 6;
+                /* Incrementa el contador en 5 */
+                background: #00cccc;
+                /* Fondo color cian */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            60% {
+                counter-increment: contador 5;
+                /* Incrementa el contador en 6 */
+                background: #0052cc;
+                /* Fondo color azul */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            70% {
+                counter-increment: contador 4;
+                /* Incrementa el contador en 7 */
+                background: #2900cc;
+                /* Fondo color azul oscuro */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            80% {
+                counter-increment: contador 3;
+                /* Incrementa el contador en 8 */
+                background: #a300cc;
+                /* Fondo color púrpura */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            90% {
+                counter-increment: contador 2;
+                /* Incrementa el contador en 9 */
+                background: #cc007a;
+                /* Fondo color rosa oscuro */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            100% {
+                counter-increment: contador 1;
+                /* Incrementa el contador en 10 */
+                background: #cc0000;
+                /* Fondo color rojo */
+                color: #fff;
+                /* Texto color blanco */
+            }
+            
         }
 
         @keyframes contador {
@@ -120,6 +229,7 @@
 <body>
     
     <div class="contador"></div>
+    <div class="contador1"></div>
 
 </body>
 </html>
